@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-export function Counter () {
-  const [count, setCount] = useState(0)
+export function Counter ({ initialValue }: { initialValue?: number }) {
+  const [count, setCount] = useState(initialValue || 0)
 
   return (
     <button
